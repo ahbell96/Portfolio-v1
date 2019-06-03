@@ -1,7 +1,9 @@
+@import "menu";
+
 $primary-colour: #383838;
 $secondary-colour: #006400;
 $show-home-image: true;
-$home-image: url(../../dist/img/background-image-1.jpg);
+$home-image: url(../../dist/img/background-image-4.jpg);
 $b-opacity: 0.75;
 
 @mixin background {

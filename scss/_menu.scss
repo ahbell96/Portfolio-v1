@@ -1,0 +1,125 @@
+$primary-colour: #383838;
+$secondary-colour: #006400;
+$portrait-image: url(../../dist/img/prollyz.jpg);
+// Menu Button
+
+@mixin easeOut {
+  transition: all 0.3s ease-out;
+}
+
+.menu-button {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  @include easeOut;
+
+  .button-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    @include easeOut;
+  }
+
+  // rotate into x
+
+  &.close {
+    transform: rotate(45deg);
+
+    .button-line {
+      // gathering specific line ...
+      // Line 1
+      &:nth-child(1) {
+        background-color: $secondary-colour;
+      }
+      // line 2
+      &:nth-child(2) {
+        background-color: $secondary-colour;
+      }
+      // line 3
+      &:nth-child(3) {
+        background-color: $secondary-colour;
+      }
+    }
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  .menu-branding,
+  .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    //list-style-type: none;
+    overflow: hidden;
+  }
+
+  .menu-nav {
+    margin: 0;
+    padding: 0;
+    background: darken($primary-colour, 5);
+    list-style: none;
+    transform: translate3d(100%, 0, 0);
+    @include easeOut;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .nav-item {
+    &.current > .nav-link {
+      color: $secondary-colour;
+    }
+  }
+
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    @include easeOut;
+
+    &:hover {
+      color: $secondary-colour;
+    }
+  }
+
+  .menu-branding {
+    background: $primary-colour;
+    @include easeOut;
+    transform: translate3d(-100%, 0, 0);
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .image-portrait {
+      width: 250px;
+      height: 250px;
+      background: $portrait-image;
+      border-radius: 50%;
+      border: solid 3px $secondary-colour;
+    }
+  }
+}

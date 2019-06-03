@@ -24,7 +24,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -41,7 +40,7 @@
   .menu .menu-nav {
     margin: 0;
     padding: 0;
-    background: #2b2b2b;
+    background: rgba(43, 43, 43, 0.9);
     list-style: none;
     transform: translate3d(100%, 0, 0);
     transition: all 0.3s ease-out; }
@@ -62,7 +61,7 @@
     .menu .nav-link:hover {
       color: #006400; }
   .menu .menu-branding {
-    background: #383838;
+    background: rgba(56, 56, 56, 0.9);
     transition: all 0.3s ease-out;
     transform: translate3d(-100%, 0, 0); }
     .menu .menu-branding.show {
@@ -73,6 +72,34 @@
       background: url(../../dist/img/prollyz.jpg);
       border-radius: 50%;
       border: solid 3px #006400; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .large-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 50px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+    width: 150px; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }
 
 * {
   box-sizing: border-box; }

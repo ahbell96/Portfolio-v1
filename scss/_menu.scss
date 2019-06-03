@@ -50,7 +50,7 @@ $portrait-image: url(../../dist/img/prollyz.jpg);
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  //opacity: 0.9;
   visibility: hidden;
 
   &.show {
@@ -73,7 +73,7 @@ $portrait-image: url(../../dist/img/prollyz.jpg);
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: darken($primary-colour, 5);
+    background: rgba(darken($primary-colour, 5), 0.9);
     list-style: none;
     transform: translate3d(100%, 0, 0);
     @include easeOut;
@@ -106,7 +106,7 @@ $portrait-image: url(../../dist/img/prollyz.jpg);
   }
 
   .menu-branding {
-    background: $primary-colour;
+    background: rgba($primary-colour, 0.9);
     @include easeOut;
     transform: translate3d(-100%, 0, 0);
 

@@ -1,9 +1,13 @@
 @import "config";
 @import "menu";
-@import "mobile";
 
 $primary-colour: #383838;
-$secondary-colour: #006400;
+$secondary-colour: #2ecc40;
+$facebook-colour: #4267b2;
+$twitter-colour: #38a1f3;
+$linked-in-colour: #0077b5;
+$github-colour: #f5f5f5;
+
 $show-home-image: true;
 $home-image: url(../../dist/img/background-image-4.jpg);
 $b-opacity: 0.75;
@@ -45,6 +49,19 @@ body {
   line-height: 1.5;
 }
 
+#home {
+  //opacity: 0;
+  -webkit-transition: opacity 2s ease-in;
+  -moz-transition: opacity 2s ease-in;
+  -o-transition: opacity 2s ease-in;
+  -ms-transition: opacity 2s ease-in;
+  transition: opacity 2s ease-in;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
 // the headings
 h1,
 h2,
@@ -53,12 +70,14 @@ h3 {
   font-weight: 300;
 
   &.large-heading {
+    opacity: 0;
     font-size: 6rem;
   }
   &.small-heading {
+    opacity: 0;
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: lighten($primary-colour, 0.5);
+    //background: lighten($primary-colour, 0.5);
   }
 }
 
@@ -75,30 +94,73 @@ header {
 }
 
 .text-secondary {
-  color: $secondary-colour;
+  color: $twitter-colour;
 }
 
 main {
   padding: 4rem;
-  height: 100%;
+  // below for sticky footer.
+  min-height: calc(100vh - 60px);
+  //height: 100%;
 
   &#home {
     overflow: hidden;
+    text-align: center;
     h1 {
-      margin-top: 20vh;
+      margin-top: 25vh;
     }
   }
 
   .icons {
+    opacity: 0;
     margin-top: 1rem;
 
     a {
       padding: 0.5em;
 
       &:hover {
-        color: $secondary-colour;
+        color: $twitter-colour;
         @include easeOut();
       }
     }
   }
 }
+
+.bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 50%;
+  border: $secondary-colour 2px solid;
+}
+
+.bio {
+  grid-area: bio;
+}
+
+.job-1 {
+  grid-area: job1;
+}
+
+.job-2 {
+  grid-area: job2;
+}
+
+.job-3 {
+  grid-area: job3;
+}
+
+.job {
+  background: lighten($primary-colour, 5);
+  padding: 0.5rem;
+  border-bottom: $secondary-colour 5px solid;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  background: darken($primary-colour, 10);
+  color: set-text-color($primary-colour);
+  height: 60px;
+}
+
+@import "mobile";

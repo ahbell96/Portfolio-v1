@@ -4,21 +4,21 @@
   right: 35px;
   top: 35px;
   cursor: pointer;
-  transition: all 0.3s ease-out; }
+  transition: all 0.5s ease-in-out; }
   .menu-button .button-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     background: #fff;
-    transition: all 0.3s ease-out; }
+    transition: all 0.5s ease-in-out; }
   .menu-button.close {
     transform: rotate(45deg); }
     .menu-button.close .button-line:nth-child(1) {
-      background-color: #006400; }
+      background-color: #2ecc40; }
     .menu-button.close .button-line:nth-child(2) {
-      background-color: #006400; }
+      background-color: #2ecc40; }
     .menu-button.close .button-line:nth-child(3) {
-      background-color: #006400; }
+      background-color: #2ecc40; }
 
 .menu {
   position: fixed;
@@ -42,12 +42,12 @@
     padding: 0;
     background: rgba(43, 43, 43, 0.9);
     list-style: none;
-    transform: translate3d(100%, 0, 0);
-    transition: all 0.3s ease-out; }
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(100%, 0, 0); }
     .menu .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu .nav-item.current > .nav-link {
-    color: #006400; }
+    color: #2ecc40; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -57,12 +57,12 @@
     font-weight: 300;
     color: #fff;
     text-decoration: none;
-    transition: all 0.3s ease-out; }
+    transition: all 0.5s ease-in-out; }
     .menu .nav-link:hover {
-      color: #006400; }
+      color: #2ecc40; }
   .menu .menu-branding {
     background: rgba(56, 56, 56, 0.9);
-    transition: all 0.3s ease-out;
+    transition: all 0.5s ease-in-out;
     transform: translate3d(-100%, 0, 0); }
     .menu .menu-branding.show {
       transform: translate3d(0, 0, 0); }
@@ -71,35 +71,18 @@
       height: 250px;
       background: url(../../dist/img/prollyz.jpg);
       border-radius: 50%;
-      border: solid 3px #006400; }
+      border: solid 3px #2ecc40;
+      transition: transform 0.3s ease-in-out; }
 
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .large-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show,
-    div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 50px; }
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0);
-    width: 150px; } }
+#about h1 {
+  text-align: center;
+  margin-bottom: 0.5em; }
 
-@media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; } }
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr); }
 
 * {
   box-sizing: border-box; }
@@ -124,6 +107,16 @@ body {
       z-index: -1;
       background: rgba(56, 56, 56, 0.75); }
 
+#home {
+  -webkit-transition: opacity 2s ease-in;
+  -moz-transition: opacity 2s ease-in;
+  -o-transition: opacity 2s ease-in;
+  -ms-transition: opacity 2s ease-in;
+  transition: opacity 2s ease-in; }
+
+.fadeIn {
+  opacity: 1; }
+
 h1,
 h2,
 h3 {
@@ -132,13 +125,14 @@ h3 {
   h1.large-heading,
   h2.large-heading,
   h3.large-heading {
+    opacity: 0;
     font-size: 6rem; }
   h1.small-heading,
   h2.small-heading,
   h3.small-heading {
+    opacity: 0;
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background: #393939; }
+    padding: 0.2rem 1rem; }
 
 a {
   color: #fff;
@@ -150,19 +144,85 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #006400; }
+  color: #38a1f3; }
 
 main {
   padding: 4rem;
-  height: 100%; }
+  min-height: calc(100vh - 60px); }
   main#home {
-    overflow: hidden; }
+    overflow: hidden;
+    text-align: center; }
     main#home h1 {
-      margin-top: 20vh; }
+      margin-top: 25vh; }
   main .icons {
+    opacity: 0;
     margin-top: 1rem; }
     main .icons a {
       padding: 0.5em; }
       main .icons a:hover {
-        color: #006400;
+        color: #38a1f3;
         transition: all 0.3s ease-out; }
+
+.bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 50%;
+  border: #2ecc40 2px solid; }
+
+.bio {
+  grid-area: bio; }
+
+.job-1 {
+  grid-area: job1; }
+
+.job-2 {
+  grid-area: job2; }
+
+.job-3 {
+  grid-area: job3; }
+
+.job {
+  background: #454545;
+  padding: 0.5rem;
+  border-bottom: #2ecc40 5px solid; }
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  background: #1f1f1f;
+  color: set-text-color(#383838);
+  height: 60px; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+  .large-heading {
+    line-height: 1;
+    margin-bottom: 1rem; }
+  .menu ul.menu-nav,
+  .menu div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    .menu ul.menu-nav.show,
+    .menu div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu .menu-nav {
+    height: 70vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu .menu-branding {
+    height: 30vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu .menu-branding .image-portrait {
+      background: url("../../dist/img/prollyz_small.jpg");
+      width: 205px;
+      height: 205px; }
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 15vh; } }

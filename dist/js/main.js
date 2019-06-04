@@ -6,8 +6,24 @@ const menuBranding = document.querySelector(".menu-branding");
 const menuNav = document.querySelector(".menu-nav");
 const navItems = document.querySelectorAll(".nav-item");
 
+//const getHomePageContent = document.getElementById("#home");
+
 // setting menu
 let showMenu = false;
+
+$(document).ready(function() {
+  $(".large-heading")
+    .delay(300)
+    .animate({ opacity: "1" }, 600);
+
+  $(".small-heading")
+    .delay(600)
+    .animate({ opacity: "1" }, 600);
+
+  $(".icons")
+    .delay(1100)
+    .animate({ opacity: "1" }, 600);
+});
 
 menuButton.addEventListener("click", toggleMenu);
 

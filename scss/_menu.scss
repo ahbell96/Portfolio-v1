@@ -1,10 +1,10 @@
 $primary-colour: #383838;
-$secondary-colour: #006400;
+$secondary-colour: #2ecc40;
 $portrait-image: url(../../dist/img/prollyz.jpg);
 // Menu Button
 
 @mixin easeOut {
-  transition: all 0.3s ease-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .menu-button {
@@ -75,8 +75,8 @@ $portrait-image: url(../../dist/img/prollyz.jpg);
     padding: 0;
     background: rgba(darken($primary-colour, 5), 0.9);
     list-style: none;
-    transform: translate3d(100%, 0, 0);
     @include easeOut;
+    transform: translate3d(100%, 0, 0);
 
     &.show {
       transform: translate3d(0, 0, 0);
@@ -108,6 +108,7 @@ $portrait-image: url(../../dist/img/prollyz.jpg);
   .menu-branding {
     background: rgba($primary-colour, 0.9);
     @include easeOut;
+    //transition: transform 0.3s ease-in-out;
     transform: translate3d(-100%, 0, 0);
 
     &.show {
@@ -120,6 +121,21 @@ $portrait-image: url(../../dist/img/prollyz.jpg);
       background: $portrait-image;
       border-radius: 50%;
       border: solid 3px $secondary-colour;
+      transition: transform 0.3s ease-in-out;
     }
   }
+}
+
+#about h1 {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "bioimage bio bio"
+    "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
 }

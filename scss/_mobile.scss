@@ -1,50 +1,68 @@
 // XL Widescreen
-@include media-XL {
+@include mediaXl {
 }
 
 // Desktop - Laptop
-@include media-large {
+@include mediaLg {
 }
 
 // Tablet
-@include media-medium {
+@include mediaMd {
   main {
     align-items: center;
     text-align: center;
+  }
 
-    .large-heading {
-      line-height: 1;
-      margin-bottom: 1rem;
+  .large-heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .menu {
+    ul.menu-nav,
+    div.menu-branding {
+      float: none;
+      width: 100%;
+      min-height: 0;
+
+      &.show {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+    .menu-nav {
+      height: 70vh;
+      transform: translate3d(-100%, 0, 0);
+      font-size: 24px;
+    }
+
+    .menu-branding {
+      height: 30vh;
+      transform: translate3d(100%, 0, 0);
+
+      .image-portrait {
+        background: url("../../dist/img/prollyz_small.jpg");
+        width: 205px;
+        height: 205px;
+      }
     }
   }
 
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0;
+  // ABOUT PAGE
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
 
-    &.show {
-      transform: translate3d(0, 0, 0);
-    }
-  }
-
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 50px;
-  }
-
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0);
-    width: 150px;
+    grid-template-columns: 1fr;
   }
 }
 
 // Smartphones
-@include media-small {
+@include mediaSm {
   main#home h1 {
-    margin-top: 10vh;
+    margin-top: 15vh;
   }
 }

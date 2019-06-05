@@ -95,7 +95,7 @@ header {
 }
 
 .text-secondary {
-  color: $twitter-colour;
+  color: $secondary-colour;
 }
 
 main {
@@ -120,7 +120,7 @@ main {
       padding: 0.5em;
 
       &:hover {
-        color: $twitter-colour;
+        color: $secondary-colour;
         @include easeOut();
       }
     }

@@ -144,7 +144,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #38a1f3; }
+  color: #2ecc40; }
 
 main {
   padding: 4rem;
@@ -160,7 +160,7 @@ main {
     main .icons a {
       padding: 0.5em; }
       main .icons a:hover {
-        color: #38a1f3;
+        color: #2ecc40;
         transition: all 0.3s ease-out; }
 
 .bio-image {
@@ -283,6 +283,9 @@ footer {
 
 @media screen and (max-width: 500px) {
   main#home h1 {
+    padding: 2rem;
     margin-top: 15vh; }
+  .large-heading {
+    font-size: 5rem; }
   .projects {
     grid-template-columns: 1fr; } }

@@ -76,7 +76,12 @@
 // Smartphones
 @include mediaSm {
   main#home h1 {
+    padding: 2rem;
     margin-top: 15vh;
+  }
+
+  .large-heading {
+    font-size: 5rem;
   }
 
   // work page

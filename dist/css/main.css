@@ -14,11 +14,11 @@
   .menu-button.close {
     transform: rotate(45deg); }
     .menu-button.close .button-line:nth-child(1) {
-      background-color: #2ecc40; }
+      background-color: #177245; }
     .menu-button.close .button-line:nth-child(2) {
-      background-color: #2ecc40; }
+      background-color: #177245; }
     .menu-button.close .button-line:nth-child(3) {
-      background-color: #2ecc40; }
+      background-color: #177245; }
 
 .menu {
   position: fixed;
@@ -47,7 +47,7 @@
     .menu .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu .nav-item.current > .nav-link {
-    color: #2ecc40; }
+    color: #177245; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -59,7 +59,7 @@
     text-decoration: none;
     transition: all 0.5s ease-in-out; }
     .menu .nav-link:hover {
-      color: #2ecc40; }
+      color: #177245; }
   .menu .menu-branding {
     background: rgba(56, 56, 56, 0.9);
     transition: all 0.5s ease-in-out;
@@ -69,9 +69,9 @@
     .menu .menu-branding .image-portrait {
       width: 250px;
       height: 250px;
-      background: url(../../dist/img/prollyz.jpg);
+      background: url(../../dist/img/me_portrait_small.jpg);
       border-radius: 50%;
-      border: solid 3px #2ecc40;
+      border: solid 3px #177245;
       transition: transform 0.3s ease-in-out; }
 
 #about h1 {
@@ -144,10 +144,10 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #2ecc40; }
+  color: #177245; }
 
 main {
-  padding: 4rem;
+  padding: 1.5rem;
   min-height: calc(100vh - 60px); }
   main#home {
     overflow: hidden;
@@ -157,17 +157,24 @@ main {
   main .icons {
     opacity: 0;
     margin-top: 1rem; }
+    main .icons .twitterLink:hover {
+      color: #38a1f3; }
+    main .icons .facebookLink:hover {
+      color: #4267b2; }
+    main .icons .linkedinLink:hover {
+      color: #0077b5; }
+    main .icons .githubLink:hover {
+      color: #040204; }
     main .icons a {
       padding: 0.5em; }
       main .icons a:hover {
-        color: #2ecc40;
         transition: all 0.3s ease-out; }
 
 .bio-image {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  border: #2ecc40 2px solid; }
+  border: #177245 2px solid; }
 
 .bio {
   grid-area: bio; }
@@ -184,7 +191,7 @@ main {
 .job {
   background: #454545;
   padding: 0.5rem;
-  border-bottom: #2ecc40 5px solid; }
+  border-bottom: #177245 5px solid; }
 
 .projects {
   display: grid;
@@ -195,7 +202,7 @@ main {
     border: 2px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #2ecc40;
+      border-color: #177245;
       transition: all 0.3s ease-out; }
 
 .boxes {
@@ -203,7 +210,7 @@ main {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 1rem; }
+  margin-top: 3rem; }
   .boxes div {
     font-size: 2rem;
     border: 3px #fff solid;
@@ -212,10 +219,10 @@ main {
     transition: all 0.3s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 2rem;
-      background: #2ecc40;
-      color: set-text-color(#2ecc40); }
+      background: #177245;
+      color: set-text-color(#177245); }
       .boxes div:hover span {
-        color: set-text-color(#2ecc40); }
+        color: set-text-color(#177245); }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -223,8 +230,8 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #2ecc40;
-    color: set-text-color(#2ecc40); }
+    background: #177245;
+    color: set-text-color(#177245); }
 
 .btn-dark {
   background: black;

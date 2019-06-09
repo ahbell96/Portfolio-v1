@@ -2,11 +2,11 @@
 @import "menu";
 
 $primary-colour: #383838;
-$secondary-colour: #2ecc40;
+$secondary-colour: #177245;
 $facebook-colour: #4267b2;
 $twitter-colour: #38a1f3;
 $linked-in-colour: #0077b5;
-$github-colour: #f5f5f5;
+$github-colour: #040204;
 $lings-colour: #2ecc40;
 
 $show-home-image: true;
@@ -99,7 +99,7 @@ header {
 }
 
 main {
-  padding: 4rem;
+  padding: 1.5rem;
   // below for sticky footer.
   min-height: calc(100vh - 60px);
   //height: 100%;
@@ -116,11 +116,27 @@ main {
     opacity: 0;
     margin-top: 1rem;
 
+    .twitterLink:hover {
+      color: $twitter-colour;
+    }
+
+    .facebookLink:hover {
+      color: $facebook-colour;
+    }
+
+    .linkedinLink:hover {
+      color: $linked-in-colour;
+    }
+
+    .githubLink:hover {
+      color: $github-colour;
+    }
+
     a {
       padding: 0.5em;
 
       &:hover {
-        color: $secondary-colour;
+        //color: $secondary-colour;
         @include easeOut();
       }
     }
@@ -180,7 +196,7 @@ main {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 3rem;
 
   div {
     font-size: 2rem;
